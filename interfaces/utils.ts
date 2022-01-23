@@ -1,5 +1,8 @@
-export { Timestamp } from "firebase/firestore";
-export type { Address } from "@stripe/stripe-js";
+import { Address } from "@stripe/stripe-js";
+import { Timestamp } from "firebase/firestore";
+
+export { Timestamp };
+export type { Address };
 
 export interface ID {
   id?: string;
