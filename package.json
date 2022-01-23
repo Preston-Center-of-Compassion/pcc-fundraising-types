@@ -1,0 +1,23 @@
+{
+  "name": "pcc-fundraising-types",
+  "version": "1.0.0",
+  "description": "Firebase document types for PCC Fundraising",
+  "main": "",
+  "types": "index.d.ts",
+  "scripts": {},
+  "typeScriptVersion": "4.5",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Preston-Center-of-Compassion/pcc-fundraising-types.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Preston-Center-of-Compassion/pcc-fundraising-types/issues"
+  },
+  "homepage": "https://github.com/Preston-Center-of-Compassion/pcc-fundraising-types#readme",
+  "devDependencies": {
+    "@stripe/stripe-js": "*",
+    "firebase": "*"
+  }
+}
