@@ -1,6 +1,6 @@
 {
   "name": "pcc-fundraising-types",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Firebase document types for PCC Fundraising",
   "main": "",
   "types": "index.d.ts",
