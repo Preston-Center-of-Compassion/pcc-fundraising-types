@@ -7,5 +7,8 @@ export interface EventTicket extends Ownable, Purchaseable {
   /** Exact timestamp for when user selected the ticket. */
   selectedAt?: Timestamp;
   /** Identifiers to determine the ticket. Looks different for different event types. */
-  ticketIdentifiers?: any;
+  ticketIdentifiers?: {
+    number?: number;
+    [key: string]: any;
+  };
 }
