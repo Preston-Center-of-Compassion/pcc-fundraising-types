@@ -1,5 +1,6 @@
 import { Address } from "@stripe/stripe-js";
 import { Timestamp } from "firebase/firestore";
+import { Contact } from "./contact";
 
 export { Timestamp };
 export type { Address };
@@ -10,16 +11,8 @@ export interface ID {
 
 /** Represents a resource that can be owned by someone, not neccessarily a user. */
 export interface Ownable {
-  /** First name of intended owner of ticket, might be different from purchasing user. */
-  holderFirstName?: string;
-  /** Last name of intended owner of ticket, might be different from purchasing user. */
-  holderLastName?: string;
-  /** Address of intended owner of ticket, might be different from purchasing user. */
-  holderAddress?: Address;
-  /** Address of intended owner of ticket, might be different from purchasing user. */
-  holderEmail?: string;
-  /** Phone number of intended owner of ticket, might be different from purchasing user. */
-  holderPhoneNumber?: string;
+  /** Contact details of owner, which might differ from user and/or purchaser. */
+  ownedBy?: Contact;
 }
 
 /** Represents a resource that can be purchased via Stripe Checkout. */
@@ -32,6 +25,14 @@ export interface Purchaseable {
   stripeCheckoutSessionId?: string;
   /** Stripe API identifier for PaymentIntent created upon payment. */
   stripePaymentIntentId?: string;
+  /** Total amount that purchaser paid. */
+  stripeGrossAmount?: number;
+  /** Amount that PCC netted from purchase.*/
+  stripeNetAmount?: number;
+  /** Amount that Stripe took from purchase. */
+  stripeFeeAmount?: number;
+  /** Contact details of purchaser, which might differ from owner. */
+  purchasedBy?: Contact;
   /** Exact timestamp for when the user completed the Stripe Checkout purchase. */
   purchasedAt?: Timestamp;
 }
