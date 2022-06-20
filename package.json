@@ -18,6 +18,11 @@
   "homepage": "https://github.com/Preston-Center-of-Compassion/pcc-fundraising-types#readme",
   "devDependencies": {
     "@stripe/stripe-js": "*",
-    "firebase": "*"
+    "@tsconfig/recommended": "^1.0.1",
+    "firebase": "*",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "zod": "^3.17.3"
   }
 }

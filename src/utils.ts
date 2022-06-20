@@ -1,9 +1,17 @@
+import { z } from "zod";
 import { Address } from "@stripe/stripe-js";
 import { Timestamp } from "firebase/firestore";
 import { Contact } from "./contact";
 
 export { Timestamp };
-export type { Address };
+export const StripeAddress: z.ZodType<Address> = z.object({
+  city: z.string().nullable(),
+  country: z.string().nullable(),
+  line1: z.string().nullable(),
+  line2: z.string().nullable(),
+  postal_code: z.string().nullable(),
+  state: z.string().nullable(),
+});
 
 export interface ID {
   id?: string;
