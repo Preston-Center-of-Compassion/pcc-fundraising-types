@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { StripeAddress } from "./utils";
+import { StripeAddress } from "./address";
 
 export const Contact = z.object({
   firstName: z.string().min(1).max(30).trim(),
