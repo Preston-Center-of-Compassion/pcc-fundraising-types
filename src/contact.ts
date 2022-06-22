@@ -8,8 +8,14 @@ export const Contact = z.object({
   email: z.string().email(),
   phoneNumber: z
     .string()
-    .regex(/^\+[1-9]\d{1,14}$/) // E.164 format: https://www.twilio.com/docs/glossary/what-e164
-    .trim(),
+    .trim()
+    .transform((val) => {
+      val = val.replace(/\D/g, "");
+      if (!val.startsWith("+")) {
+        val = "+" + val;
+      }
+      return val;
+    }),
   address: StripeAddress,
 });
 

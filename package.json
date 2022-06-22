@@ -1,10 +1,12 @@
 {
   "name": "pcc-fundraising-types",
-  "version": "1.5.0",
-  "description": "Firebase document types for PCC Fundraising",
-  "main": "",
-  "types": "index.d.ts",
-  "scripts": {},
+  "version": "2.1.1",
+  "description": "Zod schemas and types for pcc-fundraising-new",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "typeScriptVersion": "4.5",
   "repository": {
     "type": "git",
