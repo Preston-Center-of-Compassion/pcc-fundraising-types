@@ -4,9 +4,9 @@ import { Owned, Purchaseable } from "./utils";
 export const EventTicket = z
   .object({
     selectedAt: z.date(),
-    ticketIdentifier: z.string(),
-    label: z.string(),
-    description: z.string(),
+    ticketIdentifier: z.string().optional(),
+    label: z.string().optional(),
+    description: z.string().optional(),
   })
   .merge(Owned)
   .merge(Purchaseable);
