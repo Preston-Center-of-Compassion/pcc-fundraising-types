@@ -15,15 +15,15 @@ export const Prize = z.object({
 
 const AugustEventData = z.object({
   type: z.literal("august"),
-  seatPriceInCents: z.number().gt(0),
-  ticketPriceInCents: z.number().gt(0),
+  dinnerReservationPriceInCents: z.number().gt(0),
+  raffleTicketPriceInCents: z.number().gt(0),
+  raffleTotalInCents: z.number().gt(0),
   prizes: z.array(Prize),
   drawingDate: z.date(),
 });
 
 const FiftyFiftyEventData = z.object({
   type: z.literal("50-50"),
-  tyhing: z.string(),
 });
 
 export const EventDocument = z
