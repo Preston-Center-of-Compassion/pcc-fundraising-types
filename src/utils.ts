@@ -2,7 +2,7 @@ import { z } from "zod";
 import { Contact } from "./contact";
 
 export const Owned = z.object({
-  userId: z.string(),
+  userID: z.string(),
   ownedBy: Contact,
 });
 
