@@ -1,11 +1,15 @@
 {
   "name": "pcc-fundraising-types",
-  "version": "2.2.1",
+  "version": "2.3.0",
   "description": "Zod schemas and types for pcc-fundraising-new",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
+  "files": [
+    "./build"
+  ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "typeScriptVersion": "4.5",
   "repository": {
