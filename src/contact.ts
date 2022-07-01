@@ -11,6 +11,9 @@ export const Contact = z.object({
     .trim()
     .transform((val) => {
       val = val.replace(/\D/g, "");
+      if (!val.startsWith("1")) {
+        val = "1" + val;
+      }
       if (!val.startsWith("+")) {
         val = "+" + val;
       }
