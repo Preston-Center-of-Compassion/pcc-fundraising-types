@@ -22,8 +22,16 @@ const AugustEventData = z.object({
   drawingDate: z.date(),
 });
 
+const FiftyFiftyTray = z.object({
+  id: z.string(),
+  name: z.string().trim(),
+  css: z.string().optional()
+});
+
 const FiftyFiftyEventData = z.object({
   type: z.literal("50-50"),
+  trays: z.array(FiftyFiftyTray),
+  drawingDate: z.date()
 });
 
 export const EventDocument = z
