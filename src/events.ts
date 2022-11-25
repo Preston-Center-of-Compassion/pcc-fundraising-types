@@ -25,7 +25,8 @@ const AugustEventData = z.object({
 const FiftyFiftyTray = z.object({
   id: z.string(),
   name: z.string().trim(),
-  css: z.string().optional()
+  position: z.number().optional(),
+  style: z.record(z.any()).optional()
 });
 
 const FiftyFiftyEventData = z.object({

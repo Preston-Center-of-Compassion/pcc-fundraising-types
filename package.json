@@ -1,6 +1,6 @@
 {
   "name": "pcc-fundraising-types",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "description": "Zod schemas and types for pcc-fundraising-new",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",

@@ -1,3 +1,5 @@
 ### PCC Fundraising Types
 
-## Deploying
+## Publishing
+
+`npm publish`
