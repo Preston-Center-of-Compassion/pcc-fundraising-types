@@ -23,7 +23,6 @@ const AugustEventData = z.object({
 });
 
 const FiftyFiftyTray = z.object({
-  id: z.string(),
   name: z.string().trim(),
   position: z.number().optional(),
   style: z.record(z.any()).optional()
@@ -31,7 +30,7 @@ const FiftyFiftyTray = z.object({
 
 const FiftyFiftyEventData = z.object({
   type: z.literal("50-50"),
-  trays: z.array(FiftyFiftyTray),
+  trays: z.record(FiftyFiftyTray),
   drawingDate: z.date()
 });
 
@@ -46,3 +45,4 @@ export const EventDocument = z
   .and(z.union([AugustEventData, FiftyFiftyEventData]));
 
 export type EventDocument = z.infer<typeof EventDocument>;
+export type FiftyFiftyTray = z.infer<typeof FiftyFiftyTray>;

@@ -8,6 +8,7 @@ export const EventTicket = z
     ticketIdentifier: z.string().optional(),
     label: z.string().optional(),
     description: z.string().optional(),
+    metadata: z.record(z.any()).optional()
   })
   .merge(Owned)
   .merge(Purchaseable);
